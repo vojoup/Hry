@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Pocet polozek v souboru hry .txt
-pocet=`cat hry.txt | wc -l`
+pocet=`cat ~/hry/hry.txt | wc -l`
 
 echo ""
 
@@ -9,7 +9,7 @@ echo ""
 for ((i=1 ; i<="$pocet" ; i++))
 do
     echo -n "$i "
-    sed "$i"'q;d' hry.txt
+    sed "$i"'q;d' ~/hry/hry.txt
 done
 
 #Pseudo-nahodne cislo mezi 0 a pocet her
@@ -24,5 +24,5 @@ fi
 #Vypis hry odpovidajici hodnote cisla
 echo ""
 echo -n "Dnes budeme hrat : "
-sed "$cislo"'q;d' hry.txt
+sed "$cislo"'q;d' ~/hry/hry.txt
 echo "JEEEEEEJ"
